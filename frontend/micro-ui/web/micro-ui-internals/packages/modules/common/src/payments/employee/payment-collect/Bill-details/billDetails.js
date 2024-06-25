@@ -413,7 +413,7 @@ const BillDetails = ({ businessService, consumerCode, _amount, onChange }) => {
               />
             ))}
 
-          {applicationData?.applicationStatus !== "PENDING_APPL_FEE_PAYMENT" ? (
+          {(applicationData?.applicationStatus !== "PENDING_APPL_FEE_PAYMENT" || applicationData?.applicationStatus !== "PENDING_APPL_FEE_PAYMENT_CITIZEN") ? (
             <Row
               label={t("FSM_DUE_AMOUNT_TO_BE_PAID")}
               textStyle={{ fontWeight: "bold", textAlign: "left" }}
