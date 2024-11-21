@@ -165,6 +165,7 @@ public class ElasticSearchDaoImpl implements ElasticSearchDao {
 
 		long startTime = System.currentTimeMillis();
 		logger.info("ElasticSearchUtil searchData method started at ==" + startTime + " for Type " + type);
+		System.out.println("index name"+index);
 		SearchSourceBuilder sourceBuilder = new SearchSourceBuilder();
 		Iterator<Entry<String, Object>> itr = searchData.entrySet().iterator();
 		while (itr.hasNext()) {
